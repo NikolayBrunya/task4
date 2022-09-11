@@ -15,31 +15,31 @@ import org.springframework.security.core.context.SecurityContext;
 class Task4ApplicationTests {
 
 
-	private String username = "admin";
-	@Autowired
-	private SystemAuthenticator systemAuthenticator;
-	@Autowired
-	private CurrentAuthentication currentAuthentication;
+//	private final String username = "admin";
+//	@Autowired
+//	private SystemAuthenticator systemAuthenticator;
+//	@Autowired
+//	private CurrentAuthentication currentAuthentication;
 
 	@Test
 	void contextLoads() {
 
 	}
 
-	@BeforeEach
-	void setUp() {
-		systemAuthenticator.begin(username);
-	}
-	@AfterEach
-	void tearDown()
-	{
-		systemAuthenticator.end();
-	}
-	@Test
-	void checkSystemUser()
-	{
-		User user = (User) currentAuthentication.getUser();
-		Assertions.assertEquals(user.getUsername(), username);
-	}
+//	@BeforeEach
+//	void setUp() {
+//		systemAuthenticator.begin(username);
+//	}
+//	@AfterEach
+//	void tearDown()
+//	{
+//		systemAuthenticator.end();
+//	}
+//	@Test
+//	void checkSystemUser()
+//	{
+//		User user = (User) currentAuthentication.getUser();
+//		Assertions.assertEquals(user.getUsername(), username);
+//	}
 
 }
